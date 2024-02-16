@@ -1,7 +1,7 @@
 # Assignment2
 Development of a Structured Database and Text Extraction System
+<img width="690" alt="Screenshot 2024-02-16 at 3 36 53 PM" src="https://github.com/BigDataIA-Spring2024-Sec1-Team6/Assignment2/assets/113812925/a44af14f-886b-4bda-8b83-6926c1845b1b">
 
-![Uploading Screenshot 2024-02-16 at 3.36.53 PM.png…]()
 
 Google Colab Links: 
 

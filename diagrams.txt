@@ -1,0 +1,52 @@
+from diagrams import Diagram, Cluster
+from diagrams.generic.network import Switch
+from diagrams.azure.storage import BlobStorage
+from diagrams.onprem.client import User as UserClient
+from diagrams.onprem.compute import Server
+from diagrams.onprem.database import PostgreSQL as CSV
+from diagrams.aws.compute import ECS, EKS, Lambda   # Using PostgreSQL icon as a placeholder for CSV
+from diagrams.aws.storage import S3
+from diagrams.aws.network import ELB
+from diagrams.aws.compute import EC2
+with Diagram("Data Pipeline - Archtectual Diagram", show=False) as data_pipeline:
+    with Cluster("PDF Data Sources (Extraction)"):
+        PDF1 = EC2("PDF1")
+        PDF2 = EC2("PDF2")
+        PDF3 = EC2("PDF3")
+
+    with Cluster("Website Data Source"):
+        website = EKS("Website")
+
+    with Cluster("PDF Transformation"):
+        grobid = Lambda("Grobid")
+        pypdf = Lambda("PYPDF")
+        pdfminer = Lambda("PDFMiner")
+
+    with Cluster("CSV Processing"):
+        csv = ELB("CSV Processing")  # CSV processing now in its own cluster
+
+    with Cluster("Database"):
+        snowflake = RDS("Snowflake (SQL Alchemy)")
+
+    with Cluster("S3 Buckets"):
+        s3_buckets = S3("s3_buckets")
+
+
+         
+      
+    # Connecting PDF2 to PDF transformation tools
+    PDF2 >> grobid
+    PDF2 >> pypdf
+    PDF2 >> pdfminer
+
+    # Connecting Website directly to CSV processing
+    website >> csv
+
+    # Connect CSV processing and PDF transformation tools to Snowflake, then to S3 Buckets
+    csv >> snowflake
+    grobid >> s3_buckets
+    pypdf >> s3_buckets
+    pdfminer >> s3_buckets
+    snowflake >> s3_buckets
+    s3_buckets >> snowflake
+data_pipeline 

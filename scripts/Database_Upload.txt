@@ -1,0 +1,46 @@
+
+- - Database Upload - -
+
+Terminal Commands:
+
+Step 1: Connect to your snowflake account
+
+- snowsql -a account_identifier -u user_name
+
+Step 2: Enter Password
+
+- account_password
+
+Step 3: Create a Database called 'TEXT_EXTRACTION'
+
+- CREATE OR REPLACE DATABASE TEXT_EXTRACTION;
+
+(To see your created database along with the schema:
+
+SELECT CURRENT_DATABASE(), CURRENT_SCHEMA();
+
+)
+
+Step 4: Create a Warehouse
+
+- CREATE OR REPLACE WAREHOUSE text_extraction_wh WITH
+                  WAREHOUSE_SIZE='X-SMALL'
+                  AUTO_SUSPEND = 180
+                  AUTO_RESUME = TRUE
+                  INITIALLY_SUSPENDED=TRUE;
+
+(To see your created warehouse:
+
+SELECT CURRENT_WAREHOUSE();
+
+)
+
+Perform steps 5 and 6 once the code below is executed on Google Colab:
+
+Step 5: Showcase all the tables present
+
+- SHOW TABLES;
+
+Step 6: Display values in the table
+
+- SELECT * FROM STRUCTURED_DATA;

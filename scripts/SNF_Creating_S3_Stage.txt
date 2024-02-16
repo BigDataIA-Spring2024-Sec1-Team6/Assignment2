@@ -1,0 +1,9 @@
+--Database: TEXT_EXTRACTION--
+-- Schema: PUBLIC--
+
+--Creating an S3 Stage in Snowflake--
+
+CREATE STAGE amos_s3_stage
+  URL='s3://assign2amos'
+  CREDENTIALS=(AWS_KEY_ID='AKIA47CRX2W7VCWLPNMA' AWS_SECRET_KEY='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')
+  FILE_FORMAT = (TYPE = 'CSV');

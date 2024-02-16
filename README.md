@@ -1,6 +1,7 @@
 # Assignment2
 Development of a Structured Database and Text Extraction System
 
+![Uploading Screenshot 2024-02-16 at 3.36.53 PM.png…]()
 
 Google Colab Links: 
 

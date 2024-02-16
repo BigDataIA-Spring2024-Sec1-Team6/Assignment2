@@ -16,5 +16,5 @@ Step 3: Database Upload - https://colab.research.google.com/drive/1YeE8sqzZgB2z_
 
 Step 4: Cloud Storage Integration - https://colab.research.google.com/drive/1u4Ngh63CwFUKnvyTID1gA9Yt-VfFVyJ3?usp=sharing
 
-CodeLabs Link: 
+CodeLabs Link: https://codelabs-preview.appspot.com/?file_id=1fi-XHxlYEk5h73L_enrBBcfb0F27JKZ7wJNidm4rrJY#0 
 

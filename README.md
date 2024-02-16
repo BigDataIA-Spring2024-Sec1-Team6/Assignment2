@@ -4,7 +4,7 @@ Development of a Structured Database and Text Extraction System
 
 Google Colab Links: 
 
-Step 1: Web scrapping and Dataset Creation - 
+Step 1: Web scrapping and Dataset Creation - https://colab.research.google.com/drive/1-W_9jNU250M6heJt9pDyafi95xwE5jLP?usp=sharing
 
 Step 2: PDF Extraction - https://colab.research.google.com/drive/1D1FpBREX82BPYJUWfA-E8C6CJByajdBS?usp=sharing
 

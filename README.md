@@ -8,7 +8,8 @@ Google Codelab Links:
 https://codelabs-preview.appspot.com/?file_id=1fi-XHxlYEk5h73L_enrBBcfb0F27JKZ7wJNidm4rrJY#0
 
 
-Step 1: Web scrapping and Dataset Creation - https://colab.research.google.com/drive/1-W_9jNU250M6heJt9pDyafi95xwE5jLP?usp=sharing
+Step 1: Web scraping and Dataset Creation - https://colab.research.google.com/drive/1-W_9jNU250M6heJt9pDyafi95xwE5jLP?usp=sharing
+
 
 Step 2: PDF Extraction - https://colab.research.google.com/drive/1D1FpBREX82BPYJUWfA-E8C6CJByajdBS?usp=sharing
 
